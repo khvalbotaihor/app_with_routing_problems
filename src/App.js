@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 
 import Courses from './containers/Courses/Courses';
 import Users from './containers/Users/Users';
+import {Route} from "react-router-dom";
 
 class App extends Component {
   render () {
@@ -17,6 +18,10 @@ class App extends Component {
           <li>Add a 404 error page and render it for any unknown routes</li>
           <li>Redirect requests to /all-courses to /courses (=> Your "Courses" page)</li>
         </ol>
+
+          <Route path="/courses" component={Courses} />
+          <Route path="/users" component={Users} />
+
       </div>
     );
   }
